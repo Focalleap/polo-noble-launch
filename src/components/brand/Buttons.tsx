@@ -2,8 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
 
-type LinkProps = ComponentProps<typeof Link>;
-
 const primaryClass =
   "group inline-flex items-center gap-3 bg-gold px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-black transition-colors hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-light focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
@@ -22,19 +20,35 @@ function ButtonInner({ children }: { children: ReactNode }) {
   );
 }
 
-export function PrimaryLink(props: LinkProps) {
-  const { children, className, ...rest } = props as LinkProps & { className?: string };
+type LinkTo = "/" | "/founder" | "/tournaments" | "/contact";
+
+export function PrimaryLink({
+  to,
+  children,
+  className = "",
+}: {
+  to: LinkTo;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <Link {...(rest as LinkProps)} className={`${primaryClass} ${className ?? ""}`}>
+    <Link to={to} className={`${primaryClass} ${className}`}>
       <ButtonInner>{children}</ButtonInner>
     </Link>
   );
 }
 
-export function SecondaryLink(props: LinkProps) {
-  const { children, className, ...rest } = props as LinkProps & { className?: string };
+export function SecondaryLink({
+  to,
+  children,
+  className = "",
+}: {
+  to: LinkTo;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <Link {...(rest as LinkProps)} className={`${secondaryClass} ${className ?? ""}`}>
+    <Link to={to} className={`${secondaryClass} ${className}`}>
       <ButtonInner>{children}</ButtonInner>
     </Link>
   );

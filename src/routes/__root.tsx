@@ -82,16 +82,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Ride Next Polo builds a circuit of international polo tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
       },
       { name: "author", content: "Ride Next Polo" },
       { property: "og:site_name", content: "Ride Next Polo" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Ride Next Polo — Ride Beyond Borders" },
+      { name: "twitter:title", content: "Ride Next Polo — Ride Beyond Borders" },
+      { property: "og:description", content: "An international polo tour building tournaments in countries new to the sport. First stop: Morocco." },
+      { name: "twitter:description", content: "An international polo tour building tournaments in countries new to the sport. First stop: Morocco." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7e5c766-0dac-420a-93c6-73e2e24c1a22/id-preview-954c561d--47d387aa-d0e7-4498-88f8-923afe525aac.lovable.app-1784067064099.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7e5c766-0dac-420a-93c6-73e2e24c1a22/id-preview-954c561d--47d387aa-d0e7-4498-88f8-923afe525aac.lovable.app-1784067064099.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

@@ -1,24 +1,249 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Eyebrow } from "@/components/brand/Eyebrow";
+import { HorseMalletMotif } from "@/components/brand/HorseMalletMotif";
+import { PrimaryLink, SecondaryLink } from "@/components/brand/Buttons";
+import { Reveal } from "@/components/brand/Reveal";
+import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
+import { CTABanner } from "@/components/brand/CTABanner";
+import { SiteLayout } from "@/components/brand/SiteLayout";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Ride Next Polo — Ride Beyond Borders" },
+      {
+        name: "description",
+        content:
+          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+      },
+      { property: "og:title", content: "Ride Next Polo — Ride Beyond Borders" },
+      {
+        property: "og:description",
+        content:
+          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <SiteLayout>
+      <Hero />
+      <Purpose />
+      <MoroccoTeaser />
+      <FounderTeaser />
+      <CTABanner
+        eyebrow="Stay In The Saddle"
+        headline={
+          <>
+            Be first to know when <em className="italic text-gold">Morocco</em> is
+            confirmed.
+          </>
+        }
+        body="Tournament dates, ticketing, and hospitality details are announced to our list before anywhere else."
+        action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
-    </div>
+    </SiteLayout>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative overflow-hidden border-b border-line pb-24 pt-40 sm:pb-32 sm:pt-48 lg:pb-40 lg:pt-56">
+      <HorseMalletMotif className="pointer-events-none absolute -right-16 top-24 h-[560px] w-auto opacity-[0.09] sm:opacity-[0.12] lg:right-0" />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <Reveal>
+          <Eyebrow>International Polo Tour</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <h1 className="mt-8 max-w-4xl font-display text-4xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
+            The game travels.{" "}
+            <em className="italic text-gold">So do we.</em>
+          </h1>
+        </Reveal>
+        <Reveal delay={160}>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
+            Ride Next Polo builds a circuit of tournaments in countries that have
+            never hosted international polo before — pairing the sport's tradition
+            of horsemanship with the energy of a new home ground each season.
+            First stop: Morocco.
+          </p>
+        </Reveal>
+        <Reveal delay={240}>
+          <div className="mt-12 flex flex-wrap gap-4">
+            <PrimaryLink to="/tournaments">See the Morocco Tournament</PrimaryLink>
+            <SecondaryLink to="/founder">Meet Our Founder</SecondaryLink>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+const purposeItems = [
+  {
+    n: "I",
+    title: "International Hosting",
+    body: "We select a new host country for every season, working with local clubs and federations to bring a full-scale international tournament to ground that has never carried one.",
+  },
+  {
+    n: "II",
+    title: "Open Access",
+    body: "Polo has long answered to money and lineage. We build entry points — scholarships, coaching partnerships, and youth clinics — around every tournament we host.",
+  },
+  {
+    n: "III",
+    title: "Heritage & Craft",
+    body: "Horsemanship, not spectacle, is the point. Every Ride Next Polo event is built around the discipline, patience, and respect for the horse that the sport was built on.",
+  },
+];
+
+function Purpose() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl">
+          <Reveal>
+            <Eyebrow>Our Purpose</Eyebrow>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+              Polo has always crossed borders.{" "}
+              <em className="italic text-gold">
+                We're making sure more people can cross them with it.
+              </em>
+            </h2>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
+              Founded by champion player Aisha Ahmad Suleiman, Ride Next Polo
+              exists to take the sport somewhere new — building tournaments,
+              training pipelines, and audiences in places the international
+              circuit has historically overlooked.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-20 grid gap-px bg-line md:grid-cols-3">
+          {purposeItems.map((item, i) => (
+            <Reveal key={item.n} delay={i * 100} className="bg-black">
+              <article className="h-full border-t-2 border-gold bg-panel p-10">
+                <div className="font-display text-2xl italic text-gold">
+                  {item.n}
+                </div>
+                <h3 className="mt-6 font-display text-2xl text-ivory">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ivory-dim">
+                  {item.body}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const moroccoInfo = [
+  { label: "Host Nation", value: "Morocco" },
+  { label: "Edition", value: "Inaugural" },
+  { label: "Format", value: "4-Chukka" },
+  { label: "Status", value: "Announcing Soon" },
+];
+
+function MoroccoTeaser() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
+          <Reveal>
+            <Eyebrow>Season One</Eyebrow>
+            <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+              First Stop:{" "}
+              <em className="italic text-gold">Morocco</em>
+            </h2>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim">
+              Our inaugural tournament brings an international field to Morocco —
+              a country with deep equestrian roots and no shortage of appetite for
+              the sport. Expect a full tournament week: qualifying chukkas, a
+              finals day, and a program built to welcome first-time spectators
+              alongside seasoned polo followers.
+            </p>
+            <div className="mt-10">
+              <PrimaryLink to="/tournaments">Tournament Details</PrimaryLink>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="grid grid-cols-2 gap-px border border-line bg-line">
+              {moroccoInfo.map((item) => (
+                <div key={item.label} className="bg-panel p-8">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
+                    {item.label}
+                  </div>
+                  <div className="mt-4 font-display text-2xl text-ivory">
+                    {item.label === "Status" || item.label === "Format" ? (
+                      <span data-placeholder={item.value === "Announcing Soon" ? "tba" : undefined}>
+                        {item.value}
+                      </span>
+                    ) : (
+                      item.value
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FounderTeaser() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+          <Reveal>
+            <CornerBracketFrame className="aspect-[4/5] bg-panel-2">
+              <div className="flex h-full w-full items-center justify-center p-10">
+                <HorseMalletMotif className="h-full w-auto max-h-[420px] opacity-40" />
+              </div>
+            </CornerBracketFrame>
+          </Reveal>
+
+          <Reveal delay={120} className="flex flex-col justify-center">
+            <Eyebrow>Our Founder</Eyebrow>
+            <blockquote className="mt-8 font-display text-2xl leading-snug text-ivory sm:text-3xl lg:text-[2.25rem]">
+              <span className="text-gold">"</span>A champion can come from
+              anywhere. Polo is known as a{" "}
+              <em className="italic text-gold">worldly sport</em> — that doesn't
+              mean other people can't play it.
+              <span className="text-gold">"</span>
+            </blockquote>
+            <cite className="mt-4 block text-[11px] uppercase not-italic tracking-[0.28em] text-ivory-faint">
+              — Aisha Ahmad Suleiman
+            </cite>
+            <p className="mt-8 text-base leading-relaxed text-ivory-dim">
+              The first Northern Nigerian woman to compete in polo, Aisha built
+              her name at the Kano Polo Club before taking that same
+              determination international. Ride Next Polo is her next chukka:
+              opening the game to countries and players who've been waiting for
+              an invitation.
+            </p>
+            <div className="mt-10">
+              <SecondaryLink to="/founder">Read Her Full Story</SecondaryLink>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -270,6 +270,64 @@ function Values() {
   );
 }
 
+const experienceItems = [
+  { icon: Trophy, title: "International Polo Competition" },
+  { icon: Heart, title: "Horse and Stable Experiences" },
+  { icon: Compass, title: "Cultural Exploration" },
+  { icon: Handshake, title: "Professional Networking" },
+  { icon: Target, title: "Leadership Development" },
+  { icon: Mic, title: "Media & Storytelling" },
+  { icon: Users, title: "Community Building" },
+  { icon: Plane, title: "Travel Experiences" },
+  { icon: Sparkles, title: "Gala & Awards" },
+  { icon: Camera, title: "Photography & Memories" },
+];
+
+function Experience() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl">
+          <Reveal>
+            <Eyebrow>The Ride Next Experience</Eyebrow>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="mt-6 font-display text-xl leading-relaxed text-ivory sm:text-2xl lg:text-3xl">
+              Ride Next Polo is intentionally designed to be more than
+              competition. Every participant becomes part of an international
+              experience that includes:
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid gap-px bg-line grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          {experienceItems.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <Reveal key={item.title} delay={i * 60} className="bg-black">
+                <article className="flex h-full flex-col items-start border-t-2 border-gold bg-panel p-8 sm:p-10">
+                  <Icon className="h-7 w-7 text-gold" strokeWidth={1.5} />
+                  <h3 className="mt-6 font-display text-lg leading-snug text-ivory sm:text-xl">
+                    {item.title}
+                  </h3>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        <Reveal delay={120}>
+          <p className="mt-16 max-w-4xl border-l-2 border-gold pl-6 font-display text-xl italic leading-snug text-gold sm:text-2xl lg:text-3xl">
+            By the time a player leaves Ride Next Polo, they leave with far
+            more than medals. They leave with lifelong friendships,
+            unforgettable memories, and a broader understanding of the world.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 const moroccoInfo = [
   { label: "Host Nation", value: "Morocco" },
   { label: "Edition", value: "Inaugural" },

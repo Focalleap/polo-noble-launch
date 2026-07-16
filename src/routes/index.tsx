@@ -47,6 +47,7 @@ function Home() {
       <Hero />
       <Purpose />
       <Values />
+      <Experience />
       <MoroccoTeaser />
       <FounderTeaser />
       <CTABanner

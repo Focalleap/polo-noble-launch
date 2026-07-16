@@ -1,4 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  Trophy,
+  Heart,
+  Compass,
+  Handshake,
+  Target,
+  Mic,
+  Users,
+  Plane,
+  Sparkles,
+  Camera,
+} from "lucide-react";
 import { Eyebrow } from "@/components/brand/Eyebrow";
 import { HorseMalletMotif } from "@/components/brand/HorseMalletMotif";
 import { PrimaryLink, SecondaryLink } from "@/components/brand/Buttons";

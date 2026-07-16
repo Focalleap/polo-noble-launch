@@ -196,6 +196,67 @@ function Purpose() {
   );
 }
 
+const valuesItems = [
+  {
+    title: "Courage",
+    body: "Stepping beyond comfort zones.",
+  },
+  {
+    title: "Excellence",
+    body: "Delivering world-class experiences in everything we do.",
+  },
+  {
+    title: "Respect",
+    body: "Respect for horses. Respect for opponents. Respect for culture. Respect for people.",
+  },
+  {
+    title: "Connection",
+    body: "Building friendships that transcend nationality.",
+  },
+  {
+    title: "Growth",
+    body: "Helping every participant become a better player and a better person.",
+  },
+  {
+    title: "Legacy",
+    body: "Creating opportunities that inspire generations to come.",
+  },
+];
+
+function Values() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl">
+          <Reveal>
+            <Eyebrow>Our Values</Eyebrow>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+              The principles that guide every chukka we play.
+            </h2>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid gap-px bg-line grid-cols-2 md:grid-cols-3">
+          {valuesItems.map((item, i) => (
+            <Reveal key={item.title} delay={i * 80} className="bg-black">
+              <article className="h-full border-t-2 border-gold bg-panel p-8 sm:p-10">
+                <h3 className="font-display text-xl text-ivory sm:text-2xl">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ivory-dim">
+                  {item.body}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const moroccoInfo = [
   { label: "Host Nation", value: "Morocco" },
   { label: "Edition", value: "Inaugural" },

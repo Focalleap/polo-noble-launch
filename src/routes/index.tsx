@@ -34,6 +34,7 @@ function Home() {
     <SiteLayout>
       <Hero />
       <Purpose />
+      <Values />
       <MoroccoTeaser />
       <FounderTeaser />
       <CTABanner

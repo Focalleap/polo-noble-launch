@@ -84,6 +84,24 @@ function Hero() {
   );
 }
 
+const whoWeAreItems = [
+  {
+    label: "Purpose",
+    title: "Our Purpose",
+    body: "To inspire a generation of polo players to think beyond their local fields and discover the limitless opportunities that exist across the world.",
+  },
+  {
+    label: "Vision",
+    title: "Our Vision",
+    body: "To become the world's leading international youth polo platform, connecting nations through sport while shaping the next generation of global polo ambassadors.",
+  },
+  {
+    label: "Mission",
+    title: "Our Mission",
+    body: "To create meaningful international experiences where young polo players compete, learn, travel, connect, and grow into confident leaders on and off the polo field.",
+  },
+];
+
 const purposeItems = [
   {
     n: "I",
@@ -106,26 +124,53 @@ function Purpose() {
   return (
     <section className="border-b border-line py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <Reveal>
-            <Eyebrow>Our Purpose</Eyebrow>
+            <Eyebrow>Who We Are</Eyebrow>
           </Reveal>
           <Reveal delay={80}>
-            <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-              Polo has always crossed borders.{" "}
-              <em className="italic text-gold">
-                We're making sure more people can cross them with it.
-              </em>
-            </h2>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
-              Founded by champion player Aisha Ahmad Suleiman, Ride Next Polo
-              exists to take the sport somewhere new — building tournaments,
-              training pipelines, and audiences in places the international
-              circuit has historically overlooked.
+            <p className="mt-6 font-display text-xl leading-relaxed text-ivory sm:text-2xl lg:text-3xl">
+              Ride Next Polo is an international sports and cultural platform
+              created to redefine how young polo players experience the game.
+              Founded on the belief that talent should never be limited by
+              geography, Ride Next Polo provides emerging players with
+              opportunities to compete internationally, experience different
+              polo cultures, build lifelong friendships, and develop into future
+              leaders within the sport.
             </p>
           </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-ivory-dim sm:text-lg">
+              Every edition is more than a tournament. It is a carefully
+              curated experience that combines elite polo, travel, education,
+              networking, leadership, and cultural immersion.
+            </p>
+          </Reveal>
+          <Reveal delay={240}>
+            <p className="mt-8 max-w-3xl border-l-2 border-gold pl-6 font-display text-xl italic leading-snug text-gold sm:text-2xl">
+              Our mission extends far beyond the polo field. We are building a
+              global community united by courage, excellence, respect, and a
+              shared passion for horses.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-20 grid gap-px bg-line md:grid-cols-3">
+          {whoWeAreItems.map((item, i) => (
+            <Reveal key={item.title} delay={i * 100} className="bg-black">
+              <article className="h-full border-t-2 border-gold bg-panel p-10">
+                <div className="font-display text-2xl italic text-gold">
+                  {item.label}
+                </div>
+                <h3 className="mt-6 font-display text-2xl text-ivory">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ivory-dim">
+                  {item.body}
+                </p>
+              </article>
+            </Reveal>
+          ))}
         </div>
 
         <div className="mt-20 grid gap-px bg-line md:grid-cols-3">

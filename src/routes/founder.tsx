@@ -29,38 +29,6 @@ export const Route = createFileRoute("/founder")({
   component: FounderPage,
 });
 
-const timeline = [
-  {
-    year: "2017",
-    title: "First Ride, First Tournament",
-    body: "After watching a match at the Kaduna Polo Club, Aisha begins training under a local beginners' coach and plays her first tournament within the year.",
-  },
-  {
-    year: "2018",
-    title: "Dantata and Sawoe Cup, Kano International Tournament",
-    body: "Competing out of the Kaduna Polo Club, Aisha wins the Dantata and Sawoe Cup at the Kano International Tournament, becoming the first Northern Nigerian woman to claim a major polo title.",
-  },
-  {
-    year: "2019",
-    title: "A Double Governor's Cup",
-    body: "Aisha adds the Governor's Cup at the Port Harcourt International Tournament and the Governor's Cup at the Kano International Tournament to her record — two major wins in a single season.",
-  },
-  {
-    year: "2020",
-    title: "Sports Woman of the Year",
-    body: "Aisha is recognized at the Northern Pandora Awards for her impact on sport in Northern Nigeria.",
-  },
-  {
-    year: "2021",
-    title: "Forbes' 30 Inspirational Women",
-    body: "Named to Forbes' list of 30 Inspirational Women for Women's History Month, bringing international recognition to her work opening polo to new players.",
-  },
-  {
-    year: "Today",
-    title: "Founding Ride Next Polo",
-    body: "Aisha takes her belief in polo without borders international — building a tournament circuit that brings the sport to countries hosting it for the first time, starting with Morocco.",
-  },
-];
 
 function FounderPage() {
   return (
@@ -79,8 +47,7 @@ function FounderPage() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              The first Northern Nigerian woman to compete in polo — and the
-              woman taking the game international.
+              Founder & Executive Director
             </p>
           </Reveal>
         </div>
@@ -92,110 +59,92 @@ function FounderPage() {
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
             <Reveal>
               <blockquote className="border-l border-gold pl-8 font-display text-2xl italic leading-snug text-ivory sm:text-3xl">
-                "I want ladies to say yes. I started playing polo because I
-                wanted to show that riding is an option, regardless of gender."
+                "Some journeys begin with ambition. Mine began with a horse."
               </blockquote>
               <cite className="mt-6 block text-[11px] uppercase not-italic tracking-[0.28em] text-ivory-faint">
                 — Aisha Ahmad Suleiman
               </cite>
             </Reveal>
             <Reveal delay={120}>
-              <p className="text-base leading-relaxed text-ivory-dim">
-                Born in Kaduna State on 17 December 2001 to a family originally
-                from Kogi State, Aisha had no background in horses or polo — no
-                royal lineage, no riding family. Her first encounter with the
-                sport came almost by accident, watching a match at the Kaduna
-                Polo Club with friends. She made quiet enquiries about how to
-                begin, found a coach, and took her first ride in 2017. She
-                played in her first tournament the same year.
-              </p>
+              <div className="space-y-6 text-base leading-relaxed text-ivory-dim">
+                <p>
+                  Long before polo became my profession, I found myself
+                  captivated by the beauty, intelligence, and spirit of horses.
+                  That fascination eventually led me onto a polo field — a place
+                  that would shape the course of my life.
+                </p>
+                <p>
+                  As one of the few Black female polo players to emerge from
+                  Northern Nigeria, my journey has been anything but
+                  conventional. Entering a sport traditionally dominated by
+                  men required resilience, discipline, and an unwavering belief
+                  in what was possible. Publicly documented milestones — from my
+                  first tournaments to national recognition and Forbes
+                  Inspirational Woman recognition — reflect that journey, but
+                  they tell only part of the story.
+                </p>
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Turning point */}
       <section className="border-b border-line bg-panel/40 py-24 sm:py-28 lg:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-3xl">
-            <Reveal>
-              <Eyebrow>The Rise</Eyebrow>
-            </Reveal>
-            <Reveal delay={80}>
-              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-                From a first ride to the Kano Polo Club's{" "}
-                <em className="italic text-gold">biggest cups.</em>
-              </h2>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
-                Within two years of her first tournament, Aisha had beaten a
-                historically male-dominated field to win two of Northern
-                Nigeria's most prestigious polo trophies — cementing her legacy
-                in a region where she remains the only female player.
-              </p>
-            </Reveal>
-          </div>
-
-          <ol className="mt-20 space-y-16">
-            {timeline.map((item, i) => (
-              <Reveal as="li" delay={i * 60} key={item.year}>
-                <div className="grid gap-6 border-t border-line pt-10 md:grid-cols-[220px_1fr] md:gap-12">
-                  <div className="font-display text-5xl italic leading-none text-gold sm:text-6xl">
-                    {item.year}
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-display text-2xl text-ivory sm:text-3xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory-dim">
-                      {item.body}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </ol>
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <Reveal>
+            <p className="font-display text-2xl leading-snug text-ivory sm:text-3xl lg:text-4xl">
+              What transformed me most wasn't simply competing. It was the
+              realization that sport has the power to{" "}
+              <em className="italic text-gold">
+                open doors, build confidence, and connect people across
+                cultures.
+              </em>
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Continuing narrative */}
+      <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-3xl px-6">
+          <Reveal>
+            <div className="space-y-6 text-base leading-relaxed text-ivory-dim sm:text-lg">
+              <p>
+                Throughout my career, I have dedicated myself not only to
+                playing polo but also to introducing others to the sport
+                through coaching, youth development, and equestrian education.
+                Founding Black Eesh Equestrian Academy reinforced my belief that
+                access and opportunity can change lives.
+              </p>
+              <p>
+                Ride Next Polo is the natural continuation of that belief. It
+                was created to ensure that the next generation of players
+                experiences something many young athletes rarely have the chance
+                to experience — international competition, cultural exchange,
+                meaningful friendships, and personal growth.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Closing quote */}
       <section className="border-b border-line py-24 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-16 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
-            <Reveal>
-              <Eyebrow>Why Ride Next Polo</Eyebrow>
-              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-                "Most polo players come from royal or wealthy families.{" "}
-                <em className="italic text-gold">That's changing.</em>"
-              </h2>
-              <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory-dim">
-                Aisha has spoken often about the cost of entry into polo —
-                horses, gear, and club membership that put the sport out of
-                reach for most. Ride Next Polo is built around the same instinct
-                that got her onto a horse in the first place: that the game
-                should be open to anyone willing to learn it, wherever they're
-                from.
-              </p>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <aside className="h-full border-t-2 border-gold bg-panel p-10 sm:p-12">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
-                  In her words
-                </div>
-                <p className="mt-8 font-display text-2xl italic leading-snug text-ivory sm:text-[1.75rem]">
-                  There is no polo without horses, and before going into the
-                  game one has to develop a genuine and unconditional love for
-                  horses.
-                </p>
-                <div className="mt-10 h-px w-16 bg-gold" />
-                <div className="mt-6 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
-                  Aisha Ahmad Suleiman
-                </div>
-              </aside>
-            </Reveal>
-          </div>
+          <Reveal>
+            <aside className="border-t-2 border-gold bg-panel p-10 sm:p-14 lg:p-16">
+              <blockquote className="max-w-4xl font-display text-2xl italic leading-snug text-ivory sm:text-3xl lg:text-4xl">
+                "My dream is simple. That one day a young player will look back
+                and say, 'Ride Next Polo changed the way I saw the world.' If
+                that happens, then this journey will have been worthwhile."
+              </blockquote>
+              <div className="mt-10 h-px w-16 bg-gold" />
+              <div className="mt-6 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                Aisha Ahmad Suleiman, Founder & Executive Director
+              </div>
+            </aside>
+          </Reveal>
         </div>
       </section>
 

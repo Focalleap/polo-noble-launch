@@ -9,17 +9,17 @@ import { SiteLayout } from "@/components/brand/SiteLayout";
 export const Route = createFileRoute("/tournaments")({
   head: () => ({
     meta: [
-      { title: "Ride Next Polo Morocco — Season One" },
+      { title: "Ride Next Polo Morocco 2026 — The Founding Edition" },
       {
         name: "description",
         content:
-          "Season One of the Ride Next Polo international circuit brings a global field to Morocco — full tournament week, 4-chukka format, open to spectators.",
+          "Morocco 2026 — The Founding Edition of Ride Next Polo brings together talented young athletes from Nigeria and Morocco for three days of elite polo, cultural exchange, and unforgettable experiences.",
       },
-      { property: "og:title", content: "Ride Next Polo Morocco — Season One" },
+      { property: "og:title", content: "Ride Next Polo Morocco 2026 — The Founding Edition" },
       {
         property: "og:description",
         content:
-          "A full tournament week in Morocco: qualifying chukkas, consolation round, and finals day. Register interest to get confirmed dates first.",
+          "The inaugural edition of Ride Next Polo in Morocco unites young polo players from Nigeria and Morocco for elite competition, cultural exchange, and lifelong memories.",
       },
       { property: "og:type", content: "event" },
       { property: "og:url", content: "/tournaments" },
@@ -32,45 +32,41 @@ export const Route = createFileRoute("/tournaments")({
 const info = [
   { label: "Host Nation", value: "Morocco", tba: false },
   { label: "Venue", value: "To Be Announced", tba: true },
-  { label: "Dates", value: "To Be Announced", tba: true },
-  { label: "Field", value: "International", tba: false },
+  { label: "Dates", value: "2026 (To Be Confirmed)", tba: false },
+  { label: "Duration", value: "3 Days", tba: false },
+  { label: "Nations", value: "Nigeria & Morocco", tba: false },
 ];
 
 const format = [
   {
-    title: "4-Chukka Matches",
-    body: "Standard international format, four chukkas per match, with qualifying rounds feeding a single finals day.",
+    title: "Founding Nations",
+    body: "The founding edition features two nations: Nigeria and Morocco. Young athletes from both countries come together to compete, learn, and build lasting friendships.",
   },
   {
-    title: "Invited International Field",
-    body: "A mixed field of touring international teams and Moroccan and regional North African sides.",
+    title: "3-Day Experience",
+    body: "Three days of elite polo competition paired with cultural exchange, stable experiences, and shared activities designed to create connections beyond the field.",
   },
   {
     title: "Open to Spectators",
-    body: "Unlike much of the international circuit, tournament week is built with ticketed public access and clinics for first-time riders.",
+    body: "Unlike much of the international circuit, the founding edition is built with public access in mind, welcoming guests, families, and first-time followers of the game.",
   },
 ];
 
 const schedule = [
   {
     day: "Day 1",
-    title: "Arrivals & Opening Reception",
-    body: "Teams arrive, horses are stabled and rested, and the tournament opens with a welcome reception for players, hosts, and press.",
+    title: "Arrivals, Opening Reception & First Chukkas",
+    body: "Teams arrive, horses are stabled and rested, and the tournament opens with a welcome reception for players, hosts, and guests — followed by the first chukkas of the edition.",
   },
   {
-    day: "Days 2–3",
-    title: "Qualifying Chukkas",
-    body: "Group-stage matches across the invited field, open to ticketed spectators, with a riding clinic for local youth held alongside.",
+    day: "Day 2",
+    title: "Competition & Cultural Exchange",
+    body: "A full day of matches between the Nigerian and Moroccan sides, with cultural activities and shared experiences running alongside the polo.",
   },
   {
-    day: "Day 4",
-    title: "Consolation Round",
-    body: "Non-qualifying teams play for placement while semi-finalists rest and prepare.",
-  },
-  {
-    day: "Day 5",
-    title: "Finals Day",
-    body: "Semi-finals and the tournament final, followed by the trophy presentation and closing dinner.",
+    day: "Day 3",
+    title: "Finals Day, Gala & Closing Ceremony",
+    body: "The tournament final, trophy presentation, and a closing celebration to mark the end of the founding edition and the beginning of the Ride Next story.",
   },
 ];
 
@@ -102,19 +98,20 @@ function TournamentsPage() {
         <HorseMalletMotif className="pointer-events-none absolute -right-12 top-28 h-[520px] w-auto opacity-[0.08]" />
         <div className="relative mx-auto max-w-6xl px-6">
           <Reveal>
-            <Eyebrow>Season One — Inaugural Tournament</Eyebrow>
+            <Eyebrow>The Founding Edition</Eyebrow>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
-              Ride Next Polo <em className="italic text-gold">Morocco</em>
+              Ride Next Polo <em className="italic text-gold">Morocco 2026</em>
             </h1>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              Our first international tournament brings a global field of
-              players to Morocco — a country with centuries of equestrian
-              tradition and, until now, no international polo circuit of its
-              own.
+              The inaugural edition of Ride Next Polo marks the beginning of a
+              journey that we hope will inspire generations of polo players.
+              Hosted in Morocco, this first edition brings together talented
+              young athletes from Nigeria and Morocco for three days of elite
+              polo, cultural exchange, and unforgettable experiences.
             </p>
           </Reveal>
           <Reveal delay={240}>
@@ -133,7 +130,7 @@ function TournamentsPage() {
 
       {/* Info strip */}
       <section className="border-b border-line bg-panel/60">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-line md:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-line md:grid-cols-5">
           {info.map((item) => (
             <div key={item.label} className="bg-panel p-8">
               <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
@@ -156,14 +153,14 @@ function TournamentsPage() {
             <Reveal>
               <Eyebrow>The Format</Eyebrow>
               <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-                A tournament week, not just a{" "}
-                <em className="italic text-gold">match day.</em>
+                A founding edition, not just a{" "}
+                <em className="italic text-gold">tournament.</em>
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim">
-                Ride Next Polo Morocco runs across a full tournament week:
-                qualifying chukkas between invited international and North
-                African teams, a consolation round, and a finals day built for
-                first-time spectators as much as seasoned followers of the game.
+                Morocco 2026 is designed as a three-day experience that blends
+                elite polo competition with cultural immersion. It is the first
+                chapter in a larger story — one that begins with two nations
+                and a shared belief in what young players can become.
               </p>
             </Reveal>
 
@@ -190,18 +187,18 @@ function TournamentsPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <Reveal>
-              <Eyebrow>Tournament Week</Eyebrow>
+              <Eyebrow>Tournament Days</Eyebrow>
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-                A <em className="italic text-gold">provisional</em> schedule.
+                A <em className="italic text-gold">three-day</em> founding edition.
               </h2>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
                 Exact dates and venue are still being finalized with our
-                Moroccan host club. Here's how the week is shaping up — register
-                your interest to get the confirmed schedule first.
+                Moroccan host club. Here's how the three days are shaping up —
+                register your interest to get the confirmed schedule first.
               </p>
             </Reveal>
           </div>
@@ -228,12 +225,26 @@ function TournamentsPage() {
         </div>
       </section>
 
+      {/* Closing pull-quote */}
+      <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <Reveal>
+            <blockquote className="font-display text-2xl leading-snug text-ivory sm:text-3xl lg:text-4xl">
+              “More than a tournament…{" "}
+              <em className="italic text-gold">
+                This is where the Ride Next story begins.
+              </em>”
+            </blockquote>
+          </Reveal>
+        </div>
+      </section>
+
       <CTABanner
         eyebrow="Get The Confirmed Dates First"
         headline={
           <>
             Register your interest in{" "}
-            <em className="italic text-gold">Season One.</em>
+            <em className="italic text-gold">Morocco 2026.</em>
           </>
         }
         body="We'll send venue, dates, and ticketing details to your inbox as soon as they're locked in — before public announcement."

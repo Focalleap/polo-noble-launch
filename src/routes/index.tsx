@@ -49,6 +49,7 @@ function Home() {
       <Values />
       <Experience />
       <MoroccoTeaser />
+      <WhyWeExist />
       <FounderTeaser />
       <CTABanner
         eyebrow="Stay In The Saddle"

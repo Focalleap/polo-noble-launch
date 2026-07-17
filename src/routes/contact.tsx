@@ -45,6 +45,12 @@ const interests = [
 ];
 
 function ContactPage() {
+  const search = Route.useSearch();
+  const preselectedInterest =
+    typeof search.interest === "string" && interests.includes(search.interest)
+      ? search.interest
+      : "";
+
   const [status, setStatus] = useState<"idle" | "success">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -121,7 +127,7 @@ function ContactPage() {
                     <select
                       name="interest"
                       required
-                      defaultValue=""
+                      defaultValue={preselectedInterest}
                       className="w-full appearance-none border border-line bg-panel-2 px-4 py-3.5 text-sm text-ivory focus:border-gold focus:outline-none"
                     >
                       <option value="" disabled>

@@ -20,19 +20,21 @@ function ButtonInner({ children }: { children: ReactNode }) {
   );
 }
 
-type LinkTo = "/" | "/founder" | "/tournaments" | "/contact";
+type LinkTo = "/" | "/founder" | "/tournaments" | "/contact" | "/partners";
 
 export function PrimaryLink({
   to,
+  search,
   children,
   className = "",
 }: {
   to: LinkTo;
+  search?: Record<string, string>;
   children: ReactNode;
   className?: string;
 }) {
   return (
-    <Link to={to} className={`${primaryClass} ${className}`}>
+    <Link to={to} search={search} className={`${primaryClass} ${className}`}>
       <ButtonInner>{children}</ButtonInner>
     </Link>
   );
@@ -40,15 +42,17 @@ export function PrimaryLink({
 
 export function SecondaryLink({
   to,
+  search,
   children,
   className = "",
 }: {
   to: LinkTo;
+  search?: Record<string, string>;
   children: ReactNode;
   className?: string;
 }) {
   return (
-    <Link to={to} className={`${secondaryClass} ${className}`}>
+    <Link to={to} search={search} className={`${secondaryClass} ${className}`}>
       <ButtonInner>{children}</ButtonInner>
     </Link>
   );

@@ -17,11 +17,11 @@ export function SiteFooter() {
           <FooterCol title="Site">
             <FooterLink to="/">Home</FooterLink>
             <FooterLink to="/founder">Founder</FooterLink>
-            <FooterLink to="/tournaments">Morocco 2027</FooterLink>
+            <FooterLink to="/tournaments">Morocco 2026</FooterLink>
             <FooterLink to="/contact">Contact</FooterLink>
           </FooterCol>
 
-          <FooterCol title="Season One">
+          <FooterCol title="The Founding Edition">
             <FooterLink to="/tournaments">Morocco Tournament</FooterLink>
             <FooterLink to="/contact">Register Interest</FooterLink>
             <FooterLink to="/contact">Media &amp; Press</FooterLink>

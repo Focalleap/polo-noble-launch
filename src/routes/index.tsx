@@ -49,6 +49,7 @@ function Home() {
       <Values />
       <Experience />
       <MoroccoTeaser />
+      <WhyWeExist />
       <FounderTeaser />
       <CTABanner
         eyebrow="Stay In The Saddle"
@@ -379,6 +380,27 @@ function MoroccoTeaser() {
             </div>
           </Reveal>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyWeExist() {
+  return (
+    <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-4xl px-6 text-center">
+        <Reveal>
+          <Eyebrow align="center">Why We Exist</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <p className="mt-8 font-display text-xl leading-relaxed text-ivory sm:text-2xl lg:text-3xl">
+            The future of polo depends on the opportunities we create today.
+            Young athletes deserve the chance to compete internationally, ride
+            different horses, experience new cultures, and build relationships
+            that will shape their careers for years to come. Ride Next Polo
+            exists to make those opportunities accessible.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

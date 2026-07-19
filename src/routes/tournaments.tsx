@@ -5,6 +5,7 @@ import { PrimaryLink, SecondaryAnchor } from "@/components/brand/Buttons";
 import { Reveal } from "@/components/brand/Reveal";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
+import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/tournaments")({
   head: () => ({
@@ -250,6 +251,7 @@ function TournamentsPage() {
         body="We'll send venue, dates, and ticketing details to your inbox as soon as they're locked in — before public announcement."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

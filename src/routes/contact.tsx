@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/brand/Eyebrow";
 import { PrimaryButton } from "@/components/brand/Buttons";
 import { Reveal } from "@/components/brand/Reveal";
 import { SiteLayout } from "@/components/brand/SiteLayout";
+import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -234,6 +235,7 @@ function ContactPage() {
           </div>
         </div>
       </section>
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

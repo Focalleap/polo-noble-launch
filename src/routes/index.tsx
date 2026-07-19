@@ -20,8 +20,8 @@ import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 import heroRider from "@/assets/hero-rider-sunset.png";
-import playersGroup from "@/assets/players-group-morocco.png.asset.json";
-import aishaPortrait from "@/assets/aisha-portrait-blue.jpg.asset.json";
+import playersGroup from "@/assets/players-group-morocco.png";
+import aishaPortrait from "@/assets/aisha-portrait-blue.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -379,7 +379,7 @@ function MoroccoTeaser() {
           <Reveal delay={120} className="flex flex-col gap-8">
             <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
               <img
-                src={playersGroup.url}
+                src={playersGroup}
                 alt="International polo players gathered at a Moroccan stable at sunset"
                 className="h-full w-full object-cover"
                 loading="lazy"
@@ -440,7 +440,7 @@ function FounderTeaser() {
           <Reveal>
             <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
               <img
-                src={aishaPortrait.url}
+                src={aishaPortrait}
                 alt="Aisha Ahmad Suleiman, Founder of Ride Next Polo"
                 className="h-full w-full object-cover object-top"
                 loading="lazy"

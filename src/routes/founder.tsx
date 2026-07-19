@@ -6,6 +6,12 @@ import { Reveal } from "@/components/brand/Reveal";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
+import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
+import aishaWithHorse from "@/assets/aisha-with-horse.jpg.asset.json";
+import aishaKente from "@/assets/aisha-editorial-kente.jpg.asset.json";
+import aishaHelmet from "@/assets/aisha-portrait-helmet.png.asset.json";
+import aishaAction from "@/assets/aisha-match-action.png.asset.json";
+import aishaForbes from "@/assets/aisha-blackeesh-forbes.png.asset.json";
 
 export const Route = createFileRoute("/founder")({
   head: () => ({

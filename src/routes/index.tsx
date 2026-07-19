@@ -20,7 +20,7 @@ import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 import heroRider from "@/assets/aisha-editorial-kente.jpg";
-import playersGroup from "@/assets/players-group-morocco.png";
+import playersGroup from "@/assets/players-group-morocco.PNG";
 import aishaPortrait from "@/assets/aisha-portrait-blue.jpeg";
 
 export const Route = createFileRoute("/")({

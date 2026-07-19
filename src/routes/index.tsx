@@ -438,10 +438,14 @@ function FounderTeaser() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <Reveal>
-            <CornerBracketFrame className="aspect-[4/5] bg-panel-2">
-              <div className="flex h-full w-full items-center justify-center p-10">
-                <HorseMalletMotif className="h-full w-auto max-h-[420px] opacity-40" />
-              </div>
+            <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
+              <img
+                src={aishaPortrait.url}
+                alt="Aisha Ahmad Suleiman, Founder of Ride Next Polo"
+                className="h-full w-full object-cover object-top"
+                loading="lazy"
+                decoding="async"
+              />
             </CornerBracketFrame>
           </Reveal>
 

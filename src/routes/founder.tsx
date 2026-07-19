@@ -29,6 +29,38 @@ export const Route = createFileRoute("/founder")({
   component: FounderPage,
 });
 
+const timeline = [
+  {
+    year: "2017",
+    title: "First Ride, First Tournament",
+    body: "After watching a match at the Kaduna Polo Club, Aisha begins training under a local beginners' coach and plays her first tournament within the year.",
+  },
+  {
+    year: "2018",
+    title: "Dantata and Sawoe Cup, Kano International Tournament",
+    body: "Competing out of the Kaduna Polo Club, Aisha wins the Dantata and Sawoe Cup at the Kano International Tournament, becoming the first Northern Nigerian woman to claim a major polo title.",
+  },
+  {
+    year: "2019",
+    title: "A Double Governor's Cup",
+    body: "Aisha adds the Governor's Cup at the Port Harcourt International Tournament and the Governor's Cup at the Kano International Tournament to her record — two major wins in a single season.",
+  },
+  {
+    year: "2020",
+    title: "Sports Woman of the Year",
+    body: "Aisha is recognized at the Northern Pandora Awards for her impact on sport in Northern Nigeria.",
+  },
+  {
+    year: "2021",
+    title: "Forbes' 30 Inspirational Women",
+    body: "Named to Forbes' list of 30 Inspirational Women for Women's History Month, bringing international recognition to her work opening polo to new players.",
+  },
+  {
+    year: "Today",
+    title: "Founding Ride Next Polo",
+    body: "Aisha takes her belief in polo without borders international — building a tournament circuit that brings the sport to countries hosting it for the first time, starting with Morocco.",
+  },
+];
 
 function FounderPage() {
   return (
@@ -126,6 +158,51 @@ function FounderPage() {
               </p>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* The Rise */}
+      <section className="border-b border-line bg-panel/40 py-24 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <Reveal>
+              <Eyebrow>The Rise</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+                From a first ride to the Kano Polo Club's{" "}
+                <em className="italic text-gold">biggest cups.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                Within two years of her first tournament, Aisha had beaten a
+                historically male-dominated field to win two of Northern
+                Nigeria's most prestigious polo trophies — cementing her legacy
+                in a region where she remains the only female player.
+              </p>
+            </Reveal>
+          </div>
+
+          <ol className="mt-20 space-y-16">
+            {timeline.map((item, i) => (
+              <Reveal as="li" delay={i * 60} key={item.year}>
+                <div className="grid gap-6 border-t border-line pt-10 md:grid-cols-[220px_1fr] md:gap-12">
+                  <div className="font-display text-5xl italic leading-none text-gold sm:text-6xl">
+                    {item.year}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-2xl text-ivory sm:text-3xl">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
         </div>
       </section>
 

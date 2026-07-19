@@ -7,11 +7,11 @@ import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
-import aishaWithHorse from "@/assets/aisha-with-horse.jpg.asset.json";
-import aishaKente from "@/assets/aisha-editorial-kente.jpg.asset.json";
-import aishaHelmet from "@/assets/aisha-portrait-helmet.png.asset.json";
-import aishaAction from "@/assets/aisha-match-action.png.asset.json";
-import aishaForbes from "@/assets/aisha-blackeesh-forbes.png.asset.json";
+import aishaWithHorse from "@/assets/aisha-with-horse.HEIC";
+import aishaKente from "@/assets/aisha-editorial-kente.jpg";
+import aishaHelmet from "@/assets/aisha-portrait-helmet.png";
+import aishaAction from "@/assets/aisha-match-action.png";
+import aishaForbes from "@/assets/aisha-blackeesh-forbes.png";
 
 export const Route = createFileRoute("/founder")({
   head: () => ({
@@ -95,7 +95,7 @@ function FounderPage() {
             <Reveal delay={200}>
               <CornerBracketFrame className="aspect-[3/4] overflow-hidden bg-panel-2">
                 <img
-                  src={aishaWithHorse.url}
+                  src={aishaWithHorse}
                   alt="Aisha Ahmad Suleiman with her horse"
                   className="h-full w-full object-cover object-center"
                   loading="eager"
@@ -149,7 +149,7 @@ function FounderPage() {
           <Reveal className="bg-black">
             <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
               <img
-                src={aishaKente.url}
+                src={aishaKente}
                 alt="Aisha Ahmad Suleiman in kente cloth beside a grey horse"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
@@ -160,7 +160,7 @@ function FounderPage() {
           <Reveal delay={120} className="bg-black">
             <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
               <img
-                src={aishaHelmet.url}
+                src={aishaHelmet}
                 alt="Aisha Ahmad Suleiman with a red polo helmet and mallet"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
@@ -238,7 +238,7 @@ function FounderPage() {
             <Reveal>
               <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2 md:aspect-[5/4]">
                 <img
-                  src={aishaAction.url}
+                  src={aishaAction}
                   alt="Aisha Ahmad Suleiman competing on horseback in a tournament"
                   className="h-full w-full object-cover object-center"
                   loading="lazy"
@@ -252,7 +252,7 @@ function FounderPage() {
             <Reveal delay={120}>
               <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
                 <img
-                  src={aishaForbes.url}
+                  src={aishaForbes}
                   alt="Aisha featured as a Forbes Inspirational Woman"
                   className="h-full w-full object-cover object-top"
                   loading="lazy"

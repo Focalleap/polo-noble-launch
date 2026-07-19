@@ -1,4 +1,4 @@
-import logo from "@/assets/ride-next-polo-logo.jpg.asset.json";
+import logo from "@/assets/ride-next-polo-logo.PNGn";
 
 export function Logo({ className = "h-10 w-auto" }: { className?: string }) {
   return (

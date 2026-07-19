@@ -76,19 +76,34 @@ function FounderPage() {
       <section className="relative overflow-hidden border-b border-line pb-16 pt-36 sm:pb-24 sm:pt-44 lg:pb-28 lg:pt-52">
         <HorseMalletMotif className="pointer-events-none absolute -right-10 top-32 h-[420px] w-auto opacity-[0.08]" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <Reveal>
-            <Eyebrow>Our Founder</Eyebrow>
-          </Reveal>
-          <Reveal delay={80}>
-            <h1 className="mt-8 font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
-              Aisha <em className="italic text-gold">Ahmad Suleiman</em>
-            </h1>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              Founder & Executive Director
-            </p>
-          </Reveal>
+          <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+            <div>
+              <Reveal>
+                <Eyebrow>Our Founder</Eyebrow>
+              </Reveal>
+              <Reveal delay={80}>
+                <h1 className="mt-8 font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
+                  Aisha <em className="italic text-gold">Ahmad Suleiman</em>
+                </h1>
+              </Reveal>
+              <Reveal delay={160}>
+                <p className="mt-6 max-w-2xl text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                  Founder & Executive Director
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={200}>
+              <CornerBracketFrame className="aspect-[3/4] overflow-hidden bg-panel-2">
+                <img
+                  src={aishaWithHorse.url}
+                  alt="Aisha Ahmad Suleiman with her horse"
+                  className="h-full w-full object-cover object-center"
+                  loading="eager"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+            </Reveal>
+          </div>
         </div>
       </section>
 

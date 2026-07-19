@@ -73,9 +73,21 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-line pb-24 pt-40 sm:pb-32 sm:pt-48 lg:pb-40 lg:pt-56">
-      <HorseMalletMotif className="pointer-events-none absolute -right-16 top-24 h-[560px] w-auto opacity-[0.09] sm:opacity-[0.12] lg:right-0" />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section className="relative overflow-hidden border-b border-line">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroRider.url}
+          alt="Ride Next Polo rider at sunset"
+          className="h-full w-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+      </div>
+      <HorseMalletMotif className="pointer-events-none absolute -right-16 top-24 h-[560px] w-auto opacity-[0.06] sm:opacity-[0.08] lg:right-0" />
+      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-40 sm:pb-32 sm:pt-48 lg:pb-40 lg:pt-56">
         <Reveal>
           <Eyebrow>International Polo Tour</Eyebrow>
         </Reveal>

@@ -7,7 +7,7 @@ import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
-import aishaWithHorse from "@/assets/aisha-with-horse.HEIC";
+import aishaWithHorse from "@/assets/aisha-with-horse.png";
 import aishaKente from "@/assets/aisha-editorial-kente.jpg";
 import aishaHelmet from "@/assets/aisha-portrait-helmet.png";
 import aishaAction from "@/assets/aisha-match-action.png";

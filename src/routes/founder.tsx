@@ -161,6 +161,51 @@ function FounderPage() {
         </div>
       </section>
 
+      {/* The Rise */}
+      <section className="border-b border-line bg-panel/40 py-24 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <Reveal>
+              <Eyebrow>The Rise</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+                From a first ride to the Kano Polo Club's{" "}
+                <em className="italic text-gold">biggest cups.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                Within two years of her first tournament, Aisha had beaten a
+                historically male-dominated field to win two of Northern
+                Nigeria's most prestigious polo trophies — cementing her legacy
+                in a region where she remains the only female player.
+              </p>
+            </Reveal>
+          </div>
+
+          <ol className="mt-20 space-y-16">
+            {timeline.map((item, i) => (
+              <Reveal as="li" delay={i * 60} key={item.year}>
+                <div className="grid gap-6 border-t border-line pt-10 md:grid-cols-[220px_1fr] md:gap-12">
+                  <div className="font-display text-5xl italic leading-none text-gold sm:text-6xl">
+                    {item.year}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-2xl text-ivory sm:text-3xl">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Closing quote */}
       <section className="border-b border-line py-24 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">

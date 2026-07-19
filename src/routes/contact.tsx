@@ -235,6 +235,7 @@ function ContactPage() {
           </div>
         </div>
       </section>
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

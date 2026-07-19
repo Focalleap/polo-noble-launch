@@ -165,6 +165,7 @@ function PartnersPage() {
           </div>
         </div>
       </section>
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

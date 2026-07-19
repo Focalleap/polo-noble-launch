@@ -237,6 +237,7 @@ function FounderPage() {
         body="Season One brings Ride Next Polo to Morocco — a full tournament week built with local clubs, invited international teams, and public spectator access."
         action={<PrimaryLink to="/tournaments">View the Morocco Tournament</PrimaryLink>}
       />
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

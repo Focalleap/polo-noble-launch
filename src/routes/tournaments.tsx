@@ -251,6 +251,7 @@ function TournamentsPage() {
         body="We'll send venue, dates, and ticketing details to your inbox as soon as they're locked in — before public announcement."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
+      <ManifestoClose short />
     </SiteLayout>
   );
 }

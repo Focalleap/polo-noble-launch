@@ -19,6 +19,9 @@ import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
+import heroRider from "@/assets/hero-rider-sunset.png.asset.json";
+import playersGroup from "@/assets/players-group-morocco.png.asset.json";
+import aishaPortrait from "@/assets/aisha-portrait-blue.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,9 +73,21 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-line pb-24 pt-40 sm:pb-32 sm:pt-48 lg:pb-40 lg:pt-56">
-      <HorseMalletMotif className="pointer-events-none absolute -right-16 top-24 h-[560px] w-auto opacity-[0.09] sm:opacity-[0.12] lg:right-0" />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section className="relative overflow-hidden border-b border-line">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroRider.url}
+          alt="Ride Next Polo rider at sunset"
+          className="h-full w-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+      </div>
+      <HorseMalletMotif className="pointer-events-none absolute -right-16 top-24 h-[560px] w-auto opacity-[0.06] sm:opacity-[0.08] lg:right-0" />
+      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-40 sm:pb-32 sm:pt-48 lg:pb-40 lg:pt-56">
         <Reveal>
           <Eyebrow>International Polo Tour</Eyebrow>
         </Reveal>
@@ -361,14 +376,23 @@ function MoroccoTeaser() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={120} className="flex flex-col gap-8">
+            <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
+              <img
+                src={playersGroup.url}
+                alt="International polo players gathered at a Moroccan stable at sunset"
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </CornerBracketFrame>
             <div className="grid grid-cols-2 gap-px border border-line bg-line">
               {moroccoInfo.map((item) => (
-                <div key={item.label} className="bg-panel p-8">
+                <div key={item.label} className="bg-panel p-6">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
                     {item.label}
                   </div>
-                  <div className="mt-4 font-display text-2xl text-ivory">
+                  <div className="mt-3 font-display text-xl text-ivory">
                     {item.label === "Status" || item.label === "Format" ? (
                       <span data-placeholder={item.value === "Announcing Soon" ? "tba" : undefined}>
                         {item.value}
@@ -414,10 +438,14 @@ function FounderTeaser() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <Reveal>
-            <CornerBracketFrame className="aspect-[4/5] bg-panel-2">
-              <div className="flex h-full w-full items-center justify-center p-10">
-                <HorseMalletMotif className="h-full w-auto max-h-[420px] opacity-40" />
-              </div>
+            <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
+              <img
+                src={aishaPortrait.url}
+                alt="Aisha Ahmad Suleiman, Founder of Ride Next Polo"
+                className="h-full w-full object-cover object-top"
+                loading="lazy"
+                decoding="async"
+              />
             </CornerBracketFrame>
           </Reveal>
 

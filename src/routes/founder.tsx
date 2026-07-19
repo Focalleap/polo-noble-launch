@@ -6,6 +6,12 @@ import { Reveal } from "@/components/brand/Reveal";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
+import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
+import aishaWithHorse from "@/assets/aisha-with-horse.jpg.asset.json";
+import aishaKente from "@/assets/aisha-editorial-kente.jpg.asset.json";
+import aishaHelmet from "@/assets/aisha-portrait-helmet.png.asset.json";
+import aishaAction from "@/assets/aisha-match-action.png.asset.json";
+import aishaForbes from "@/assets/aisha-blackeesh-forbes.png.asset.json";
 
 export const Route = createFileRoute("/founder")({
   head: () => ({
@@ -70,19 +76,34 @@ function FounderPage() {
       <section className="relative overflow-hidden border-b border-line pb-16 pt-36 sm:pb-24 sm:pt-44 lg:pb-28 lg:pt-52">
         <HorseMalletMotif className="pointer-events-none absolute -right-10 top-32 h-[420px] w-auto opacity-[0.08]" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <Reveal>
-            <Eyebrow>Our Founder</Eyebrow>
-          </Reveal>
-          <Reveal delay={80}>
-            <h1 className="mt-8 font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
-              Aisha <em className="italic text-gold">Ahmad Suleiman</em>
-            </h1>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              Founder & Executive Director
-            </p>
-          </Reveal>
+          <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+            <div>
+              <Reveal>
+                <Eyebrow>Our Founder</Eyebrow>
+              </Reveal>
+              <Reveal delay={80}>
+                <h1 className="mt-8 font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
+                  Aisha <em className="italic text-gold">Ahmad Suleiman</em>
+                </h1>
+              </Reveal>
+              <Reveal delay={160}>
+                <p className="mt-6 max-w-2xl text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                  Founder & Executive Director
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={200}>
+              <CornerBracketFrame className="aspect-[3/4] overflow-hidden bg-panel-2">
+                <img
+                  src={aishaWithHorse.url}
+                  alt="Aisha Ahmad Suleiman with her horse"
+                  className="h-full w-full object-cover object-center"
+                  loading="eager"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -119,6 +140,34 @@ function FounderPage() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* Editorial image break */}
+      <section className="relative overflow-hidden border-b border-line">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-line md:grid-cols-2">
+          <Reveal className="bg-black">
+            <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
+              <img
+                src={aishaKente.url}
+                alt="Aisha Ahmad Suleiman in kente cloth beside a grey horse"
+                className="h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={120} className="bg-black">
+            <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
+              <img
+                src={aishaHelmet.url}
+                alt="Aisha Ahmad Suleiman with a red polo helmet and mallet"
+                className="h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -184,6 +233,38 @@ function FounderPage() {
               </p>
             </Reveal>
           </div>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-[1.35fr_1fr]">
+            <Reveal>
+              <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2 md:aspect-[5/4]">
+                <img
+                  src={aishaAction.url}
+                  alt="Aisha Ahmad Suleiman competing on horseback in a tournament"
+                  className="h-full w-full object-cover object-center"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                On the field — Kano Polo Club
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
+                <img
+                  src={aishaForbes.url}
+                  alt="Aisha featured as a Forbes Inspirational Woman"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                Forbes Inspirational Woman, 2021
+              </p>
+            </Reveal>
+          </div>
+
 
           <ol className="mt-20 space-y-16">
             {timeline.map((item, i) => (

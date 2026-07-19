@@ -122,6 +122,37 @@ function PartnersPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Impact */}
+      <section className="border-b border-line py-24 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <Reveal>
+              <Eyebrow>Impact</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+                Measuring What Matters
+              </h2>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                Our vision is to create measurable impact through:
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-3">
+            {impactItems.map((item, i) => (
+              <Reveal key={item} delay={i * 40}>
+                <span className="inline-flex items-center border border-line bg-panel px-5 py-3 text-sm uppercase tracking-[0.18em] text-ivory">
+                  {item}
+                </span>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </SiteLayout>
   );
 }

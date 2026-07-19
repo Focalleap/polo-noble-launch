@@ -63,6 +63,7 @@ function Home() {
         body="Tournament dates, ticketing, and hospitality details are announced to our list before anywhere else."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
+      <ManifestoClose />
     </SiteLayout>
   );
 }

@@ -5,6 +5,7 @@ import { PrimaryLink, SecondaryAnchor } from "@/components/brand/Buttons";
 import { Reveal } from "@/components/brand/Reveal";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
+import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/tournaments")({
   head: () => ({

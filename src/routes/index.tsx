@@ -18,6 +18,7 @@ import { Reveal } from "@/components/brand/Reveal";
 import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
+import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/")({
   head: () => ({

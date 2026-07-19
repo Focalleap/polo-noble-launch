@@ -376,14 +376,23 @@ function MoroccoTeaser() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={120} className="flex flex-col gap-8">
+            <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
+              <img
+                src={playersGroup.url}
+                alt="International polo players gathered at a Moroccan stable at sunset"
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </CornerBracketFrame>
             <div className="grid grid-cols-2 gap-px border border-line bg-line">
               {moroccoInfo.map((item) => (
-                <div key={item.label} className="bg-panel p-8">
+                <div key={item.label} className="bg-panel p-6">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
                     {item.label}
                   </div>
-                  <div className="mt-4 font-display text-2xl text-ivory">
+                  <div className="mt-3 font-display text-xl text-ivory">
                     {item.label === "Status" || item.label === "Format" ? (
                       <span data-placeholder={item.value === "Announcing Soon" ? "tba" : undefined}>
                         {item.value}

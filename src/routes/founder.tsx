@@ -234,6 +234,38 @@ function FounderPage() {
             </Reveal>
           </div>
 
+          <div className="mt-16 grid gap-8 md:grid-cols-[1.35fr_1fr]">
+            <Reveal>
+              <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2 md:aspect-[5/4]">
+                <img
+                  src={aishaAction.url}
+                  alt="Aisha Ahmad Suleiman competing on horseback in a tournament"
+                  className="h-full w-full object-cover object-center"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                On the field — Kano Polo Club
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <CornerBracketFrame className="aspect-[4/5] overflow-hidden bg-panel-2">
+                <img
+                  src={aishaForbes.url}
+                  alt="Aisha featured as a Forbes Inspirational Woman"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </CornerBracketFrame>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-ivory-faint">
+                Forbes Inspirational Woman, 2021
+              </p>
+            </Reveal>
+          </div>
+
+
           <ol className="mt-20 space-y-16">
             {timeline.map((item, i) => (
               <Reveal as="li" delay={i * 60} key={item.year}>

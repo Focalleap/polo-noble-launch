@@ -143,6 +143,34 @@ function FounderPage() {
         </div>
       </section>
 
+      {/* Editorial image break */}
+      <section className="relative overflow-hidden border-b border-line">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-line md:grid-cols-2">
+          <Reveal className="bg-black">
+            <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
+              <img
+                src={aishaKente.url}
+                alt="Aisha Ahmad Suleiman in kente cloth beside a grey horse"
+                className="h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={120} className="bg-black">
+            <div className="aspect-[4/5] w-full overflow-hidden md:aspect-[3/4]">
+              <img
+                src={aishaHelmet.url}
+                alt="Aisha Ahmad Suleiman with a red polo helmet and mallet"
+                className="h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Turning point */}
       <section className="border-b border-line bg-panel/40 py-24 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center">

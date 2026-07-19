@@ -42,6 +42,17 @@ const partnerPillars = [
   },
 ];
 
+const impactItems = [
+  "Youth Development",
+  "International Exchange",
+  "Female Participation",
+  "Leadership",
+  "Cross-cultural Collaboration",
+  "Sports Tourism",
+  "Equestrian Development",
+  "Global Networking",
+];
+
 function PartnersPage() {
   return (
     <SiteLayout>

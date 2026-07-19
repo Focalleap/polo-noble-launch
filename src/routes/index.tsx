@@ -19,7 +19,7 @@ import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
-import heroRider from "@/assets/hero-rider-sunset.png.asset.json";
+import heroRider from "@/assetsIMG_2187.PNG";
 import playersGroup from "@/assets/players-group-morocco.png.asset.json";
 import aishaPortrait from "@/assets/aisha-portrait-blue.jpg.asset.json";
 

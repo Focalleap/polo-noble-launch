@@ -19,7 +19,7 @@ import { CornerBracketFrame } from "@/components/brand/CornerBracketFrame";
 import { CTABanner } from "@/components/brand/CTABanner";
 import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
-import heroRider from "@/assets/IMG_2187.PNG";
+import heroRider from "@/assets/hero-rider-sunset.png";
 import playersGroup from "@/assets/players-group-morocco.png.asset.json";
 import aishaPortrait from "@/assets/aisha-portrait-blue.jpg.asset.json";
 
@@ -77,7 +77,7 @@ function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src={heroRider.url}
+          src={heroRider}
           alt="Ride Next Polo rider at sunset"
           className="h-full w-full object-cover object-center"
           loading="eager"

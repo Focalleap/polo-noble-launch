@@ -21,6 +21,7 @@ import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 import heroRider from "@/assets/hero-rider-sunset.PNG";
 import playersGroup from "@/assets/players-group-morocco.PNG";
+import moroccoPicture from "@/assets/mor.jpeg";
 import aishaPortrait from "@/assets/aisha-portrait-blue.jpeg";
 
 export const Route = createFileRoute("/")({
@@ -379,7 +380,7 @@ function MoroccoTeaser() {
           <Reveal delay={120} className="flex flex-col gap-8">
             <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
               <img
-                src={playersGroup}
+                src={moroccoPicture}
                 alt="International polo players gathered at a Moroccan stable at sunset"
                 className="h-full w-full object-cover"
                 loading="lazy"

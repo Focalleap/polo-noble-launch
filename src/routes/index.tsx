@@ -100,9 +100,7 @@ function Hero() {
         </Reveal>
         <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-            Ride Next Polo builds a circuit of tournaments in countries that have
-            never hosted international polo before — pairing the sport's tradition
-            of horsemanship with the energy of a new home ground each season.
+            Ride Next Polo creates a global circuit of tournaments, bringing the timeless tradition of polo and horsemanship to a new home ground each season.
             First stop: Morocco.
           </p>
         </Reveal>

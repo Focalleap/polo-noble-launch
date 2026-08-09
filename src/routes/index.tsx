@@ -101,12 +101,12 @@ function Hero() {
         <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
             Ride Next Polo creates a global circuit of tournaments, bringing the timeless tradition of polo and horsemanship to a new home ground each season.
-            First stop: Morocco.
+            First stop: to be revealed.
           </p>
         </Reveal>
         <Reveal delay={240}>
           <div className="mt-12 flex flex-wrap gap-4">
-            <PrimaryLink to="/tournaments">See the Morocco Tournament</PrimaryLink>
+            <PrimaryLink to="/tournaments">See the Shortlist</PrimaryLink>
             <SecondaryLink to="/founder">Meet Our Founder</SecondaryLink>
           </div>
         </Reveal>

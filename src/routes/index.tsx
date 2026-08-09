@@ -31,13 +31,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps.",
       },
       { property: "og:title", content: "Ride Next Polo — Ride Beyond Borders" },
       {
         property: "og:description",
         content:
-          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },

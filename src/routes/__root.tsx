@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps.",
       },
       { name: "author", content: "Ride Next Polo" },
       { property: "og:site_name", content: "Ride Next Polo" },
@@ -90,8 +90,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Ride Next Polo — Ride Beyond Borders" },
       { name: "twitter:title", content: "Ride Next Polo — Ride Beyond Borders" },
-      { property: "og:description", content: "An international polo tour building tournaments in countries new to the sport. First stop: Morocco." },
-      { name: "twitter:description", content: "An international polo tour building tournaments in countries new to the sport. First stop: Morocco." },
+      { property: "og:description", content: "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps." },
+      { name: "twitter:description", content: "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7e5c766-0dac-420a-93c6-73e2e24c1a22/id-preview-954c561d--47d387aa-d0e7-4498-88f8-923afe525aac.lovable.app-1784067064099.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7e5c766-0dac-420a-93c6-73e2e24c1a22/id-preview-954c561d--47d387aa-d0e7-4498-88f8-923afe525aac.lovable.app-1784067064099.png" },
     ],

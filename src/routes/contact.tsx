@@ -99,7 +99,7 @@ function ContactPage() {
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
               Whether you're a player, a sponsor, a member of the press, or
-              simply want to follow Season One in Morocco, this is the fastest
+              simply want to follow Season One, this is the fastest
               way to reach us.
             </p>
           </Reveal>

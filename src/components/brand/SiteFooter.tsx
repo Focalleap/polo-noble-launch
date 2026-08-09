@@ -10,19 +10,19 @@ export function SiteFooter() {
             <Logo className="h-12 w-auto" />
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-ivory-dim">
               An international polo tour building tournaments in countries new to
-              the sport — starting in Morocco.
+              the sport. The founding host nation is still to be revealed.
             </p>
           </div>
 
           <FooterCol title="Site">
             <FooterLink to="/">Home</FooterLink>
             <FooterLink to="/founder">Founder</FooterLink>
-            <FooterLink to="/tournaments">Morocco 2026</FooterLink>
+            <FooterLink to="/tournaments">2026 Edition</FooterLink>
             <FooterLink to="/contact">Contact</FooterLink>
           </FooterCol>
 
           <FooterCol title="The Founding Edition">
-            <FooterLink to="/tournaments">Morocco Tournament</FooterLink>
+            <FooterLink to="/tournaments">The Shortlist</FooterLink>
             <FooterLink to="/contact">Register Interest</FooterLink>
             <FooterLink to="/contact">Media &amp; Press</FooterLink>
           </FooterCol>

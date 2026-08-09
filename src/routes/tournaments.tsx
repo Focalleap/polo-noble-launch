@@ -108,26 +108,26 @@ function TournamentsPage() {
         <HorseMalletMotif className="pointer-events-none absolute -right-12 top-28 h-[520px] w-auto opacity-[0.08]" />
         <div className="relative mx-auto max-w-6xl px-6">
           <Reveal>
-            <Eyebrow>The Founding Edition</Eyebrow>
+            <Eyebrow>Season One — The Destination Reveal</Eyebrow>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
-              Ride Next Polo <em className="italic text-gold">Morocco 2026</em>
+              Six nations. One host.{" "}
+              <em className="italic text-gold">All to be revealed.</em>
             </h1>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              The inaugural edition of Ride Next Polo marks the beginning of a
-              journey that we hope will inspire generations of polo players.
-              Hosted in Morocco, this first edition brings together talented
-              young athletes from Nigeria and Morocco for three days of elite
-              polo, cultural exchange, and unforgettable experiences.
+              The founding edition of Ride Next Polo is coming in 2026 — and the
+              host nation is still under wraps. We've narrowed it down to six
+              countries with the horsemanship, hospitality, and history to host
+              the world's next great polo tournament.
             </p>
           </Reveal>
           <Reveal delay={240}>
             <div className="mt-12 flex flex-wrap gap-4">
               <PrimaryLink to="/contact">Register Interest</PrimaryLink>
-              <SecondaryAnchor href="#format">Tournament Format</SecondaryAnchor>
+              <SecondaryAnchor href="#shortlist">The Shortlist</SecondaryAnchor>
             </div>
           </Reveal>
           <Reveal delay={320}>
@@ -140,7 +140,7 @@ function TournamentsPage() {
 
       {/* Info strip */}
       <section className="border-b border-line bg-panel/60">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-line md:grid-cols-5">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-line md:grid-cols-4">
           {info.map((item) => (
             <div key={item.label} className="bg-panel p-8">
               <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
@@ -155,6 +155,45 @@ function TournamentsPage() {
           ))}
         </div>
       </section>
+
+      {/* Shortlist */}
+      <section
+        id="shortlist"
+        className="scroll-mt-24 border-b border-line py-24 sm:py-28 lg:py-32"
+      >
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <Reveal>
+              <Eyebrow>The Shortlist</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
+                Six countries in the{" "}
+                <em className="italic text-gold">running.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
+                No ranking. No shortlist order. Each of these nations is capable
+                of hosting the founding edition — one of them will.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 grid grid-cols-2 gap-px bg-line md:grid-cols-3">
+            {shortlist.map((country, i) => (
+              <Reveal key={country} delay={i * 70} className="bg-black">
+                <article className="flex h-full items-center border-t-2 border-gold bg-panel p-8 sm:p-10">
+                  <h3 className="font-display text-xl text-ivory sm:text-2xl">
+                    {country}
+                  </h3>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Format */}
       <section id="format" className="scroll-mt-24 border-b border-line py-24 sm:py-28 lg:py-32">

@@ -201,17 +201,20 @@ function TournamentsPage() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-                A <em className="italic text-gold">three-day</em> founding edition.
+                The format is set. Only the{" "}
+                <em className="italic text-gold">destination</em> remains a
+                secret.
               </h2>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim">
-                Exact dates and venue are still being finalized with our
-                Moroccan host club. Here's how the three days are shaping up —
-                register your interest to get the confirmed schedule first.
+                The tournament week is already mapped out day by day — venue and
+                exact dates follow the host announcement. Register your interest
+                to get the confirmed schedule first.
               </p>
             </Reveal>
           </div>
+
 
           <ol className="mt-16 space-y-10">
             {schedule.map((s, i) => (

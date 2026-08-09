@@ -167,10 +167,10 @@ function TournamentsPage() {
                 <em className="italic text-gold">tournament.</em>
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim">
-                Morocco 2026 is designed as a three-day experience that blends
-                elite polo competition with cultural immersion. It is the first
-                chapter in a larger story — one that begins with two nations
-                and a shared belief in what young players can become.
+                Wherever it lands, Season One is designed as a full tournament
+                experience that blends elite polo competition with cultural
+                immersion. It is the first chapter in a larger story — one built
+                on a shared belief in what young players can become.
               </p>
             </Reveal>
 

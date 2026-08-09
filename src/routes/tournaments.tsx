@@ -250,14 +250,14 @@ function TournamentsPage() {
       </section>
 
       <CTABanner
-        eyebrow="Get The Confirmed Dates First"
+        eyebrow="The Destination Reveal"
         headline={
           <>
-            Register your interest in{" "}
-            <em className="italic text-gold">Morocco 2026.</em>
+            Be the first to{" "}
+            <em className="italic text-gold">find out.</em>
           </>
         }
-        body="We'll send venue, dates, and ticketing details to your inbox as soon as they're locked in — before public announcement."
+        body="Register your interest and we'll email you the moment the host destination is revealed — before it's announced anywhere else."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
       <ManifestoClose short />

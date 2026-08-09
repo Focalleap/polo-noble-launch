@@ -31,13 +31,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps.",
       },
       { property: "og:title", content: "Ride Next Polo — Ride Beyond Borders" },
       {
         property: "og:description",
         content:
-          "An international polo tour building tournaments in countries new to the sport. First stop: Morocco.",
+          "An international polo tour building tournaments in countries new to the sport. Season One's host nation is still under wraps.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -60,11 +60,11 @@ function Home() {
         eyebrow="Stay In The Saddle"
         headline={
           <>
-            Be first to know when <em className="italic text-gold">Morocco</em> is
-            confirmed.
+            Be first to know where{" "}
+            <em className="italic text-gold">Season One</em> lands.
           </>
         }
-        body="Tournament dates, ticketing, and hospitality details are announced to our list before anywhere else."
+        body="The host destination, tournament dates, and ticketing details are announced to our list before anywhere else."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
       <ManifestoClose />
@@ -101,12 +101,12 @@ function Hero() {
         <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
             Ride Next Polo creates a global circuit of tournaments, bringing the timeless tradition of polo and horsemanship to a new home ground each season.
-            First stop: Morocco.
+            First stop: to be revealed.
           </p>
         </Reveal>
         <Reveal delay={240}>
           <div className="mt-12 flex flex-wrap gap-4">
-            <PrimaryLink to="/tournaments">See the Morocco Tournament</PrimaryLink>
+            <PrimaryLink to="/tournaments">See the Shortlist</PrimaryLink>
             <SecondaryLink to="/founder">Meet Our Founder</SecondaryLink>
           </div>
         </Reveal>
@@ -345,11 +345,11 @@ function Experience() {
   );
 }
 
-const moroccoInfo = [
-  { label: "Host Nation", value: "Morocco" },
+const seasonOneInfo = [
+  { label: "Shortlist", value: "6 Nations" },
   { label: "Edition", value: "Inaugural" },
   { label: "Format", value: "4-Chukka" },
-  { label: "Status", value: "Announcing Soon" },
+  { label: "Status", value: "Reveal Coming Soon" },
 ];
 
 function MoroccoTeaser() {
@@ -360,45 +360,44 @@ function MoroccoTeaser() {
           <Reveal>
             <Eyebrow>Season One</Eyebrow>
             <h2 className="mt-6 font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
-              First Stop:{" "}
-              <em className="italic text-gold">Morocco</em>
+              One Destination.{" "}
+              <em className="italic text-gold">Still A Secret.</em>
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim">
-              Our inaugural tournament brings an international field to Morocco —
-              a country with deep equestrian roots and no shortage of appetite for
-              the sport. Expect a full tournament week: qualifying chukkas, a
-              finals day, and a program built to welcome first-time spectators
-              alongside seasoned polo followers.
+              Our founding edition is set for 2026 — we've shortlisted six
+              countries capable of hosting international polo for the first
+              time. Where we land is still being decided.
             </p>
             <div className="mt-10">
-              <PrimaryLink to="/tournaments">Tournament Details</PrimaryLink>
+              <PrimaryLink to="/tournaments">See the Shortlist</PrimaryLink>
             </div>
           </Reveal>
+
 
           <Reveal delay={120} className="flex flex-col gap-8">
             <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
               <img
                 src={moroccoPicture}
-                alt="International polo players gathered at a Moroccan stable at sunset"
+                alt="International polo players gathered at a stable at sunset"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
               />
             </CornerBracketFrame>
             <div className="grid grid-cols-2 gap-px border border-line bg-line">
-              {moroccoInfo.map((item) => (
+              {seasonOneInfo.map((item) => (
                 <div key={item.label} className="bg-panel p-6">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
                     {item.label}
                   </div>
                   <div className="mt-3 font-display text-xl text-ivory">
-                    {item.label === "Status" || item.label === "Format" ? (
-                      <span data-placeholder={item.value === "Announcing Soon" ? "tba" : undefined}>
-                        {item.value}
-                      </span>
-                    ) : (
-                      item.value
-                    )}
+                    <span
+                      data-placeholder={
+                        item.value === "Reveal Coming Soon" ? "tba" : undefined
+                      }
+                    >
+                      {item.value}
+                    </span>
                   </div>
                 </div>
               ))}

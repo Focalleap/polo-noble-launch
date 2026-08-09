@@ -65,7 +65,7 @@ const timeline = [
   {
     year: "Today",
     title: "Founding Ride Next Polo",
-    body: "Aisha takes her belief in polo without borders international — building a tournament circuit that brings the sport to countries hosting it for the first time, starting with Morocco.",
+    body: "Aisha takes her belief in polo without borders international — building a tournament circuit that brings the sport to countries hosting it for the first time.",
   },
 ];
 
@@ -315,8 +315,8 @@ function FounderPage() {
             <em className="italic text-gold">taking the sport.</em>
           </>
         }
-        body="Season One brings Ride Next Polo to Morocco — a full tournament week built with local clubs, invited international teams, and public spectator access."
-        action={<PrimaryLink to="/tournaments">View the Morocco Tournament</PrimaryLink>}
+        body="Season One is a full tournament week built with local clubs, invited international teams, and public spectator access — in a host nation still to be revealed."
+        action={<PrimaryLink to="/tournaments">See the Shortlist</PrimaryLink>}
       />
       <ManifestoClose short />
     </SiteLayout>

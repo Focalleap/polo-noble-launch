@@ -8,14 +8,18 @@ import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    interest: typeof search.interest === "string" ? search.interest : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact — Ride Next Polo" },
       {
         name: "description",
         content:
-          "Reach the Ride Next Polo team: register interest in Season One in Morocco, or contact us for press, partnerships, and team enquiries.",
+          "Reach the Ride Next Polo team: register interest in Season One, or contact us for press, partnerships, and team enquiries.",
       },
+
       { property: "og:title", content: "Contact — Ride Next Polo" },
       {
         property: "og:description",
@@ -95,7 +99,7 @@ function ContactPage() {
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
               Whether you're a player, a sponsor, a member of the press, or
-              simply want to follow Season One in Morocco, this is the fastest
+              simply want to follow Season One, this is the fastest
               way to reach us.
             </p>
           </Reveal>

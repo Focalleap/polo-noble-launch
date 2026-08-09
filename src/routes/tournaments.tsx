@@ -71,7 +71,7 @@ const schedule = [
   {
     day: "Day 2",
     title: "Competition & Cultural Exchange",
-    body: "A full day of matches between the Nigerian and Moroccan sides, with cultural activities and shared experiences running alongside the polo.",
+    body: "A full day of matches between the invited international sides, with cultural activities and shared experiences running alongside the polo.",
   },
   {
     day: "Day 3",

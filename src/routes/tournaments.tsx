@@ -10,17 +10,17 @@ import { ManifestoClose } from "@/components/brand/ManifestoClose";
 export const Route = createFileRoute("/tournaments")({
   head: () => ({
     meta: [
-      { title: "Ride Next Polo Morocco 2026 — The Founding Edition" },
+      { title: "Season One — The Destination Reveal | Ride Next Polo" },
       {
         name: "description",
         content:
-          "Morocco 2026 — The Founding Edition of Ride Next Polo brings together talented young athletes from Nigeria and Morocco for three days of elite polo, cultural exchange, and unforgettable experiences.",
+          "Six nations. One host. All to be revealed. The founding edition of Ride Next Polo arrives in 2026 — see the shortlist and register to hear the destination first.",
       },
-      { property: "og:title", content: "Ride Next Polo Morocco 2026 — The Founding Edition" },
+      { property: "og:title", content: "Season One — The Destination Reveal" },
       {
         property: "og:description",
         content:
-          "The inaugural edition of Ride Next Polo in Morocco unites young polo players from Nigeria and Morocco for elite competition, cultural exchange, and lifelong memories.",
+          "The host nation of the founding Ride Next Polo edition is still under wraps. Six countries are on the shortlist — the reveal is coming soon.",
       },
       { property: "og:type", content: "event" },
       { property: "og:url", content: "/tournaments" },
@@ -31,27 +31,36 @@ export const Route = createFileRoute("/tournaments")({
 });
 
 const info = [
-  { label: "Host Nation", value: "Morocco", tba: false },
-  { label: "Venue", value: "To Be Announced", tba: true },
+  { label: "Shortlist", value: "6 Nations", tba: false },
+  { label: "Reveal", value: "Coming Soon", tba: true },
   { label: "Dates", value: "2026 (To Be Confirmed)", tba: false },
-  { label: "Duration", value: "3 Days", tba: false },
-  { label: "Nations", value: "Nigeria & Morocco", tba: false },
+  { label: "Field", value: "International", tba: false },
+];
+
+const shortlist = [
+  "Morocco",
+  "Dubai (UAE)",
+  "Kenya",
+  "Uganda",
+  "Nigeria",
+  "Egypt",
 ];
 
 const format = [
   {
-    title: "Founding Nations",
-    body: "The founding edition features two nations: Nigeria and Morocco. Young athletes from both countries come together to compete, learn, and build lasting friendships.",
+    title: "4-Chukka Matches",
+    body: "Every fixture is played over four chukkas — fast, physical, and readable for first-time spectators without losing the discipline of the traditional game.",
   },
   {
-    title: "3-Day Experience",
-    body: "Three days of elite polo competition paired with cultural exchange, stable experiences, and shared activities designed to create connections beyond the field.",
+    title: "Invited International Field",
+    body: "Teams are invited from across the circuit, pairing emerging young players with experienced international sides for genuine competition.",
   },
   {
     title: "Open to Spectators",
     body: "Unlike much of the international circuit, the founding edition is built with public access in mind, welcoming guests, families, and first-time followers of the game.",
   },
 ];
+
 
 const schedule = [
   {

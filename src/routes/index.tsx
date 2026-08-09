@@ -60,11 +60,11 @@ function Home() {
         eyebrow="Stay In The Saddle"
         headline={
           <>
-            Be first to know when <em className="italic text-gold">Morocco</em> is
-            confirmed.
+            Be first to know where{" "}
+            <em className="italic text-gold">Season One</em> lands.
           </>
         }
-        body="Tournament dates, ticketing, and hospitality details are announced to our list before anywhere else."
+        body="The host destination, tournament dates, and ticketing details are announced to our list before anywhere else."
         action={<PrimaryLink to="/contact">Register Interest</PrimaryLink>}
       />
       <ManifestoClose />

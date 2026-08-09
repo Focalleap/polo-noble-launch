@@ -385,19 +385,19 @@ function MoroccoTeaser() {
               />
             </CornerBracketFrame>
             <div className="grid grid-cols-2 gap-px border border-line bg-line">
-              {moroccoInfo.map((item) => (
+              {seasonOneInfo.map((item) => (
                 <div key={item.label} className="bg-panel p-6">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold">
                     {item.label}
                   </div>
                   <div className="mt-3 font-display text-xl text-ivory">
-                    {item.label === "Status" || item.label === "Format" ? (
-                      <span data-placeholder={item.value === "Announcing Soon" ? "tba" : undefined}>
-                        {item.value}
-                      </span>
-                    ) : (
-                      item.value
-                    )}
+                    <span
+                      data-placeholder={
+                        item.value === "Reveal Coming Soon" ? "tba" : undefined
+                      }
+                    >
+                      {item.value}
+                    </span>
                   </div>
                 </div>
               ))}

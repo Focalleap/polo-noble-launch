@@ -378,7 +378,7 @@ function MoroccoTeaser() {
             <CornerBracketFrame className="aspect-[4/3] overflow-hidden bg-panel-2">
               <img
                 src={moroccoPicture}
-                alt="International polo players gathered at a Moroccan stable at sunset"
+                alt="International polo players gathered at a stable at sunset"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"

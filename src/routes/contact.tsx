@@ -8,14 +8,18 @@ import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    interest: typeof search.interest === "string" ? search.interest : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact — Ride Next Polo" },
       {
         name: "description",
         content:
-          "Reach the Ride Next Polo team: register interest in Season One in Morocco, or contact us for press, partnerships, and team enquiries.",
+          "Reach the Ride Next Polo team: register interest in Season One, or contact us for press, partnerships, and team enquiries.",
       },
+
       { property: "og:title", content: "Contact — Ride Next Polo" },
       {
         property: "og:description",

@@ -364,7 +364,7 @@ function MoroccoTeaser() {
               <em className="italic text-gold">Still A Secret.</em>
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim">
-              Our founding edition is set for 2026 — we've shortlisted six
+              Our founding edition is set for 2027 — we've shortlisted six
               countries capable of hosting international polo for the first
               time. Where we land is still being decided.
             </p>

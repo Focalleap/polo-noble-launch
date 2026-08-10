@@ -14,7 +14,7 @@ export const Route = createFileRoute("/tournaments")({
       {
         name: "description",
         content:
-          "Six nations. One host. All to be revealed. The founding edition of Ride Next Polo arrives in 2026 — see the shortlist and register to hear the destination first.",
+          "Six nations. One host. All to be revealed. The founding edition of Ride Next Polo arrives in 2027 — see the shortlist and register to hear the destination first.",
       },
       { property: "og:title", content: "Season One — The Destination Reveal" },
       {
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/tournaments")({
 const info = [
   { label: "Shortlist", value: "6 Nations", tba: false },
   { label: "Reveal", value: "Coming Soon", tba: true },
-  { label: "Dates", value: "2026 (To Be Confirmed)", tba: false },
+  { label: "Dates", value: "2027 (To Be Confirmed)", tba: false },
   { label: "Field", value: "International", tba: false },
 ];
 
@@ -118,7 +118,7 @@ function TournamentsPage() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory-dim sm:text-lg">
-              The founding edition of Ride Next Polo is coming in 2026 — and the
+              The founding edition of Ride Next Polo is coming in 2027 — and the
               host nation is still under wraps. We've narrowed it down to six
               countries with the horsemanship, hospitality, and history to host
               the world's next great polo tournament.

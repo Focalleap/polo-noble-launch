@@ -38,12 +38,12 @@ const info = [
 ];
 
 const shortlist = [
-  "Morocco",
-  "Dubai (UAE)",
   "Kenya",
   "Uganda",
-  "Nigeria",
+  "Morocco",
   "Egypt",
+  "Dubai",
+  "Argentina",
 ];
 
 const format = [

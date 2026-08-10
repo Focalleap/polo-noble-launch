@@ -31,7 +31,7 @@ export const Route = createFileRoute("/partners")({
 const partnerPillars = [
   {
     title: "Sponsorship",
-    body: "Align your brand with the inaugural 2026 edition and a pioneering international youth polo platform.",
+    body: "Align your brand with the inaugural 2027 edition and a pioneering international youth polo platform.",
   },
   {
     title: "Cultural Collaboration",

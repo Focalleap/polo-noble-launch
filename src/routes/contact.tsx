@@ -8,8 +8,8 @@ import { SiteLayout } from "@/components/brand/SiteLayout";
 import { ManifestoClose } from "@/components/brand/ManifestoClose";
 
 export const Route = createFileRoute("/contact")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    interest: typeof search.interest === "string" ? search.interest : undefined,
+  validateSearch: z.object({
+    interest: z.string().optional(),
   }),
   head: () => ({
     meta: [
